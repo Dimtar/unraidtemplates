@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>nextcloudpi</Name>
+  <Repository>ownyourbits/nextcloudpi</Repository>
+  <Registry>https://hub.docker.com/r/ownyourbits/nextcloudpi</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://forums.unraid.net/topic/84549-support-nextcloudpi/</Support>
+  <Project>https://ownyourbits.com/</Project>
+  <Overview>This is a template for the Nextcloudpi docker container, this is an all in one solution for someone wanting to run Nextcloud on their unRaid server. More information can be found here:&#xD;
+https://ownyourbits.com/&#xD;
+https://hub.docker.com/r/ownyourbits/nextcloudpi&#xD;
+&#xD;
+Before hitting start, select advanced view in the top right corner, add your servers IP address e.g. 192.168.1.5</Overview>
+  <Category>Cloud: Tools: MediaServer:Music MediaServer:Photos</Category>
+  <WebUI>https://[IP]:[PORT:443]/</WebUI>
+  <TemplateURL/>
+  <Icon/>
+  <ExtraParams/>
+  <PostArgs>Enter server IP here e.g. 192.168.1.5</PostArgs>
+  <CPUset/>
+  <DateInstalled>1571883904</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>This is a template for the Nextcloudpi docker container, this is an all in one solution for someone wanting to run Nextcloud on their unRaid server. More information can be found here:&#xD;
+https://ownyourbits.com/&#xD;
+https://hub.docker.com/r/ownyourbits/nextcloudpi&#xD;
+&#xD;
+Before hitting start, select advanced view in the top right corner, add your servers IP address e.g. 192.168.1.5</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>80</HostPort>
+        <ContainerPort>80</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>443</HostPort>
+        <ContainerPort>443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+      <Port>
+        <HostPort>4443</HostPort>
+        <ContainerPort>4443</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir>/mnt/user/appdata/nextcloudpi</HostDir>
+      <ContainerDir>/data</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Nextcloud data folder" Target="/data" Default="/mnt/user/appdata/nextcloudpi" Mode="rw" Description="The folder to store all data related to the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nextcloudpi</Config>
+  <Config Name="HTTP web port" Target="80" Default="80" Mode="tcp" Description="None secure web port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTPS web port" Target="443" Default="443" Mode="tcp" Description="Secure web port" Type="Port" Display="always" Required="false" Mask="false">443</Config>
+  <Config Name="Panel web port" Target="4443" Default="4443" Mode="tcp" Description="Port to serve the Nextcloudpi management panel on." Type="Port" Display="always" Required="false" Mask="false">4443</Config>
+</Container>
