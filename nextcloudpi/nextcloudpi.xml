@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Shell>sh</Shell>
-  <Privileged>false</Privileged>
+  <Privileged>true</Privileged>
   <Support>https://forums.unraid.net/topic/84549-support-nextcloudpi/</Support>
   <Project>https://ownyourbits.com/</Project>
   <Overview>This is a template for the Nextcloudpi docker container, this is an all in one solution for someone wanting to run Nextcloud on their unRaid server. More information can be found here:&#xD;
