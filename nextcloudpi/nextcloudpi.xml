@@ -59,7 +59,7 @@ Before hitting start, select advanced view in the top right corner, add your ser
   <Environment/>
   <Labels/>
   <Config Name="Nextcloud data folder" Target="/data" Default="/mnt/user/appdata/nextcloudpi" Mode="rw" Description="The folder to store all data related to the container" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/nextcloudpi</Config>
-  <Config Name="HTTP web port" Target="80" Default="80" Mode="tcp" Description="None secure web port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
+  <Config Name="HTTP web port" Target="80" Default="80" Mode="tcp" Description="Non secure web port" Type="Port" Display="always" Required="false" Mask="false">80</Config>
   <Config Name="HTTPS web port" Target="443" Default="443" Mode="tcp" Description="Secure web port" Type="Port" Display="always" Required="false" Mask="false">443</Config>
   <Config Name="Panel web port" Target="4443" Default="4443" Mode="tcp" Description="Port to serve the Nextcloudpi management panel on." Type="Port" Display="always" Required="false" Mask="false">4443</Config>
 </Container>
